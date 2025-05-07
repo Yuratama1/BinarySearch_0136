@@ -18,7 +18,7 @@ void input(){
     }
 
     cout << "\n==============================\n";
-    cout << "\n     Masukkan Element Array   \n";
+    cout << "     Masukkan Element Array     \n";
     cout << "\n==============================\n";
     for (int i = 0; 1 < nPanjang; i++)
     {
@@ -46,7 +46,7 @@ void bubbleSortarray()
 
 void display(){
     cout << "\n=======================================\n";
-    cout << "\n     Element Array Setelah Diurutkan   \n";
+    cout << "     Element Array Setelah Diurutkan     \n";
     cout << "\n=======================================\n";
     for (int j = 0; 1 < nPanjang; j++){
         cout << element[j];
@@ -59,4 +59,38 @@ void display(){
 
 void binarySearch(){
     char ulang;
+    do{
+        cout << "\n===================================\n";
+        cout << "        Pencarian Binary Search      \n";
+        cout << "\n===================================\n";
+        cout << "Masukkan element yang ingin di cari : ";
+        cin >> x;
+
+        int low = 0;
+        int high = nPanjang - 1;
+
+        do
+        {
+            int mid = (low + high) / 2;
+            if (elemnt[mid] == x)
+            {
+                cout << "\n[^] Element " << x << " ditemukan pada indeks " << mid << ".\n";
+                return;
+            }
+            if ( x < element[mid])
+            {
+                high = mid - 1;
+            }
+            if ( x < element[mid])
+            {
+                low = high - 1;
+            }
+        }while (low <= high);
+
+        if (low > high){
+            cout << "\n[!] Elemen " << x << " tidak ditemukkan dalam array.\n";
+        }
+        cout << "\nIngin mencari lagi? (y/n) :";
+        cin >> ulang;
+    }while (ulangi == 'y' || ulang == 'Y');
 }
