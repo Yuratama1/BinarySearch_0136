@@ -26,5 +26,10 @@ void input(){
 }
 
 void bubbleSortarray(){
-    
+    int pass = 1;
+    do{
+        for (int j = 0; j <= nPanjang - 1 - pass; j++){
+
+        }
+    } while (pass <= nPanjang - 1);
 }
