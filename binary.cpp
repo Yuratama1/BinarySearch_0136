@@ -24,3 +24,7 @@ void input(){
         cout << "Data ke-" << (i + 1) << " = ";
     }
 }
+
+void bubbleSortarray(){
+    
+}
