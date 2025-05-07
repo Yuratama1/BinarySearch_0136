@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int elemet[10];
+int element[10];
 int nPanjang;
 int x;
 
@@ -72,7 +72,7 @@ void binarySearch(){
         do
         {
             int mid = (low + high) / 2;
-            if (elemnt[mid] == x)
+            if (element[mid] == x)
             {
                 cout << "\n[^] Element " << x << " ditemukan pada indeks " << mid << ".\n";
                 return;
@@ -92,5 +92,12 @@ void binarySearch(){
         }
         cout << "\nIngin mencari lagi? (y/n) :";
         cin >> ulang;
-    }while (ulangi == 'y' || ulang == 'Y');
+    }while (ulang == 'y' || ulang == 'Y');
+}
+
+int main(){
+    input();
+    bubbleSortarray();
+    display();
+    binarySearch();
 }
