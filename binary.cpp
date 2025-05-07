@@ -45,5 +45,14 @@ void bubbleSortarray()
 }
 
 void display(){
-    
+    cout << "\n=======================================\n";
+    cout << "\n     Element Array Setelah Diurutkan   \n";
+    cout << "\n=======================================\n";
+    for (int j = 0; 1 < nPanjang; j++){
+        cout << element[j];
+        if (j < nPanjang - 1){
+            cout << " --> ";
+        }
+    }
+    cout << endl;
 }
